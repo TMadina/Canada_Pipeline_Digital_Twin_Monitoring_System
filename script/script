@@ -35,3 +35,19 @@ segments_gdf= gpd.GeoDataFrame(
 )
 
 segments_gdf['length_m']= segments_gdf.length
+class Pipeline Segment:
+   def __init__ (self, segment_id, geometry):
+       self.segment_id= segment_id
+       self.geometry= geometry
+
+       self.pressure= None
+       self.temperature= None
+       self.vibration= None 
+       self.water_distance= None
+
+   def simulate_sensor(self):
+      import random
+
+      self.pressure= random.randint(700,1200)
+      self.temperature= random.uniform(10,45)
+      self.vibration= random.uniform(0,10)
